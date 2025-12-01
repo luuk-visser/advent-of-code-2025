@@ -7,15 +7,28 @@ app = marimo.App(width="medium")
 @app.cell
 def _():
     import marimo as mo
+    from pathlib import Path
 
-    return (mo,)
+    from advent_of_code_2025.utils import obtain_input
+
+    import numpy as np
+    import polars as pl
+
+    # from advent_of_code_2025.grid import GridPoint, Direction, rotate_right
+    return Path, mo, obtain_input
+
+
+@app.cell
+def _(Path, obtain_input):
+    day_number = Path(__file__).stem
+    input_fp = obtain_input(day_number)
+    return (day_number,)
 
 
 @app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    from pathlib import Path
-    mo.md(f"# Day {Path(__file__).stem}")
+def _(day_number, mo):
+    mo.md(f"""
+    # Day {day_number}
     """)
     return
 
@@ -30,7 +43,9 @@ def _(mo):
 
 @app.cell
 def _():
-    # from advent_of_code_2025.grid import GridPoint, Direction, rotate_right
+    # data = open(input_fp).read()
+    # data = open(input_fp).read().splitlines()
+    # data = np.loadtxt(input_fp, dtype="int")
     return
 
 

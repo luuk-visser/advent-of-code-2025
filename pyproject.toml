@@ -15,7 +15,7 @@ platforms = ["linux-64"]
 [tool.ruff]
 lint.select = ["E", "F", "I"]
 lint.ignore = []
-line-length = 120
+line-length = 110
 exclude = [
     ".pixi",
 ]
@@ -34,6 +34,9 @@ marimo = ">=0.18.0,<0.19"
 polars = ">=1.35.2,<2"
 matplotlib = ">=3.10.8,<4"
 numpy = ">=2.3.5,<3"
-ruff = ">=0.14.6,<0.15"
+ruff = ">=0.14.7,<0.15"
 python-lsp-server = ">=1.13.2,<2"
 python-lsp-ruff = ">=2.3.0,<3"
+pyprojroot = ">=0.3.0,<0.4"
+python-dotenv = ">=1.2.1,<2"
+requests = ">=2.32.5,<3"
