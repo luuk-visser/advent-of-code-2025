@@ -119,7 +119,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libzlib-1.3.1-hb9d3cd8_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/loro-1.8.2-py314h5059d10_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/lsprotocol-2025.0.0-pyhe01879c_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/marimo-0.18.0-py314h9e666f3_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/marimo-0.18.1-py314h9e666f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/markdown-3.10-pyhcf101f3_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/matplotlib-3.10.8-py314hdafbbf9_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/matplotlib-base-3.10.8-py314h1194b4b_0.conda
@@ -256,7 +256,7 @@ packages:
 - pypi: ./
   name: advent-of-code-2025
   version: 0.1.0
-  sha256: 53a6ece07767ef4f3ee374cc5201e16de0603b4af57c00f1e41657c1c7cdbec6
+  sha256: 25546eba1dc360db9b393d28a96846dc36feb24aa70d661b01e71a8b0ca321f9
   requires_python: '>=3.11'
   editable: true
 - conda: https://conda.anaconda.org/conda-forge/linux-64/alsa-lib-1.2.14-hb9d3cd8_0.conda
@@ -1639,9 +1639,9 @@ packages:
   - pkg:pypi/lsprotocol?source=hash-mapping
   size: 155528
   timestamp: 1750264551204
-- conda: https://conda.anaconda.org/conda-forge/linux-64/marimo-0.18.0-py314h9e666f3_0.conda
-  sha256: 581bc8fb16fd40cbf65c31d56eaae9918ec9af6d951bf0a7d6781ee54696be95
-  md5: 5c329af7fc03cf503f1e80f69e5107d9
+- conda: https://conda.anaconda.org/conda-forge/linux-64/marimo-0.18.1-py314h9e666f3_0.conda
+  sha256: 4581b043ca4541fadc82147918cbc87c71070d90bf802b18ee0a411f76bcd7fa
+  md5: c78d6bca728dd592903c4861793e223f
   depends:
   - python
   - click >=8.0,<9
@@ -1666,8 +1666,8 @@ packages:
   license_family: APACHE
   purls:
   - pkg:pypi/marimo?source=hash-mapping
-  size: 29885846
-  timestamp: 1763682912890
+  size: 29928136
+  timestamp: 1764664100274
 - conda: https://conda.anaconda.org/conda-forge/noarch/markdown-3.10-pyhcf101f3_1.conda
   sha256: 32af5d32e3193b7c0ea02c33cc8753bfc0965d07e1aa58418a851d0bb94a7792
   md5: 934afb77580165027b869d4104ee002f
