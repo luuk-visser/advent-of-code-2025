@@ -7,13 +7,11 @@ app = marimo.App(width="medium")
 @app.cell
 def _():
     from itertools import chain
-    import marimo as mo
     from pathlib import Path
 
-    from advent_of_code_2025.utils import obtain_input
+    import marimo as mo
 
-    import numpy as np
-    import polars as pl
+    from advent_of_code_2025.utils import obtain_input
     return Path, chain, mo, obtain_input
 
 

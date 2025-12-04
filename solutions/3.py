@@ -6,13 +6,12 @@ app = marimo.App(width="medium")
 
 @app.cell
 def _():
-    import marimo as mo
     from pathlib import Path
 
-    from advent_of_code_2025.utils import obtain_input
-
+    import marimo as mo
     import numpy as np
-    import polars as pl
+
+    from advent_of_code_2025.utils import obtain_input
 
     # from advent_of_code_2025.grid import GridPoint, Direction, rotate_right
     return Path, mo, np, obtain_input
