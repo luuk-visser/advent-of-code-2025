@@ -1,84 +1,85 @@
+[save]
+autosave = "after_delay"
+format_on_save = true
+autosave_delay = 1000
+
 [runtime]
-output_max_bytes = 8000000
-std_stream_max_bytes = 1000000
 reactive_tests = true
-on_cell_change = "autorun"
 default_sql_output = "auto"
-auto_reload = "autorun"
-auto_instantiate = false
 watcher_on_save = "lazy"
+std_stream_max_bytes = 1000000
 default_auto_download = ["ipynb"]
+on_cell_change = "autorun"
+auto_reload = "autorun"
+output_max_bytes = 8000000
+dotenv = []
+auto_instantiate = true
+
+[package_management]
+manager = "pixi"
+
+[snippets]
+include_default_snippets = true
+custom_paths = []
+
+[display]
+theme = "dark"
+cell_output = "below"
+dataframes = "rich"
+code_editor_font_size = 14
+default_width = "medium"
+default_table_max_columns = 50
+reference_highlighting = false
+default_table_page_size = 10
+
+[experimental]
+
+[language_servers.pylsp]
+enable_pylint = false
+enable_pydocstyle = false
+enable_flake8 = false
+enable_mypy = false
+enable_ruff = true
+enable_pyflakes = false
+enabled = true
+
+[language_servers.basedpyright]
+
+[language_servers.ty]
 
 [datasources]
 
 [ai]
-mode = "manual"
 inline_tooltip = false
+mode = "manual"
 rules = ""
 
 [ai.models]
 custom_models = []
 displayed_models = []
 
+[completion]
+activate_on_typing = true
+copilot = false
+
 [server]
 browser = "default"
 follow_symlink = false
 
-[experimental]
-
-[keymap]
-preset = "default"
-destructive_delete = true
-
-[keymap.overrides]
-
 [formatting]
 line_length = 100
 
-[package_management]
-manager = "pixi"
-
-[save]
-autosave_delay = 1000
-autosave = "after_delay"
-format_on_save = true
-
-[display]
-reference_highlighting = false
-theme = "dark"
-code_editor_font_size = 14
-dataframes = "rich"
-default_table_page_size = 10
-default_table_max_columns = 50
-default_width = "medium"
-cell_output = "below"
-
 [diagnostics]
-enabled = true
 sql_linter = true
-
-[snippets]
-include_default_snippets = true
-custom_paths = []
+enabled = true
 
 [mcp]
 presets = []
 
 [mcp.mcpServers]
 
-[completion]
-activate_on_typing = true
-copilot = false
+[keymap]
+destructive_delete = true
+preset = "default"
 
-[language_servers.pylsp]
-enable_ruff = true
-enable_mypy = false
-enable_pyflakes = false
-enable_pydocstyle = false
-enable_flake8 = false
-enable_pylint = false
-enabled = true
-
-[language_servers.basedpyright]
-
-[language_servers.ty]
+[keymap.overrides]
