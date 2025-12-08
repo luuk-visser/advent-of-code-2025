@@ -9,7 +9,7 @@ def obtain_input(day: int | str, year: int | str = 2025) -> Path:
     """
     Ensure data_dir/day.txt exists by downloading the Advent of Code input if missing.
     Returns the Path to the file.
-    """  
+    """
     data_dir.mkdir(parents=True, exist_ok=True)
     fp = data_dir / f"{day}.txt"
 

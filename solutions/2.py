@@ -12,6 +12,7 @@ def _():
     import marimo as mo
 
     from advent_of_code_2025.utils import obtain_input
+
     return Path, chain, mo, obtain_input
 
 
@@ -43,10 +44,8 @@ def _():
     def n_digits(num):
         return len(str(num))
 
-
     def ceiling_division(n, d):
         return -(n // -d)
-
 
     def generate_repeated_numbers(l, r, n_reps=2):
         init_seq_len = ceiling_division(n_digits(l), n_reps)
@@ -60,6 +59,7 @@ def _():
         while (curr := int(sequence * n_reps)) <= r:
             yield curr
             sequence = str(int(sequence) + 1)
+
     return generate_repeated_numbers, n_digits
 
 

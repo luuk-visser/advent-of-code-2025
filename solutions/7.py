@@ -6,14 +6,12 @@ app = marimo.App(width="medium")
 
 @app.cell
 def _():
-    import marimo as mo
+    from collections import defaultdict
     from pathlib import Path
 
-    from advent_of_code_2025.utils import obtain_input
+    import marimo as mo
 
-    from collections import defaultdict
-    import numpy as np
-    import polars as pl
+    from advent_of_code_2025.utils import obtain_input
 
     # from advent_of_code_2025.grid import GridPoint, Direction, rotate_right
     return Path, defaultdict, mo, obtain_input
@@ -46,7 +44,6 @@ def _(mo):
 def _(input_fp):
     lines = open(input_fp).read().splitlines()
 
-
     def n_beam_splits(lines):
         n, m = len(lines), len(lines[0])
         start = lines[0].index("S")
@@ -63,7 +60,6 @@ def _(input_fp):
                     beams.add(col + 1)
 
         return n_splits
-
 
     n_beam_splits(lines)
     return (lines,)
@@ -95,7 +91,6 @@ def _(defaultdict, lines):
                     particles[col + 1] += count
 
         return sum(particles.values())
-
 
     n_particles(lines)
     return

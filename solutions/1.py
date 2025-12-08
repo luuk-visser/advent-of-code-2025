@@ -12,6 +12,7 @@ def _():
     import numpy as np
 
     from advent_of_code_2025.utils import obtain_input
+
     return Path, mo, np, obtain_input
 
 
@@ -45,12 +46,12 @@ def _(input_fp, np):
         value = int(instruction[1:])
         return direction * value
 
-
     def get_positions(instructions, starting_pos=50):
         return np.cumsum(
-            np.array([starting_pos] + [instruction_to_turns(instruction) for instruction in instructions])
+            np.array(
+                [starting_pos] + [instruction_to_turns(instruction) for instruction in instructions]
+            )
         )
-
 
     instructions = open(input_fp).read().splitlines()
     positions = get_positions(instructions)

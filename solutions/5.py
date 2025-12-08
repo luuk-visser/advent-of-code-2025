@@ -6,13 +6,12 @@ app = marimo.App(width="medium")
 
 @app.cell
 def _():
-    import marimo as mo
     from pathlib import Path
 
-    from advent_of_code_2025.utils import obtain_input
-
+    import marimo as mo
     import numpy as np
-    import polars as pl
+
+    from advent_of_code_2025.utils import obtain_input
 
     # from advent_of_code_2025.grid import GridPoint, Direction, rotate_right
     return Path, mo, np, obtain_input
@@ -53,7 +52,6 @@ def _(input_fp, np):
                 processed_ivs.append(iv)
         return np.array(processed_ivs)
 
-
     intervals_txt, ingredients_txt = open(input_fp).read()[:-1].split("\n\n")
     ivs = process_intervals(intervals_txt)
     ingredients = list(map(int, ingredients_txt.splitlines()))
@@ -65,7 +63,6 @@ def _(ingredients, ivs, np):
     def ingredient_in_intervals(ingredient, ivs):
         idx = np.searchsorted(ivs[:, 0], ingredient, "right") - 1
         return idx != -1 and ingredient <= ivs[idx, 1]
-
 
     sum(ingredient_in_intervals(ingredient, ivs) for ingredient in ingredients)
     return

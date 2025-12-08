@@ -44,7 +44,6 @@ def _(mo):
 def _(input_fp, np):
     batteries = np.asarray([list(map(int, r)) for r in open(input_fp).read().splitlines()])
 
-
     def largest_possible_joltage(bank, n_batteries=2):
         idcs_per_digit = [np.nonzero(bank == i)[0] for i in range(10)]
         joltage = 0
@@ -65,7 +64,6 @@ def _(input_fp, np):
                 break
 
         return joltage
-
 
     sum(largest_possible_joltage(bank, n_batteries=2) for bank in batteries)
     return batteries, largest_possible_joltage

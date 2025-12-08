@@ -6,12 +6,13 @@ app = marimo.App(width="medium")
 
 @app.cell
 def _():
-    import marimo as mo
     from pathlib import Path
+
+    import marimo as mo
+    import numpy as np
 
     from advent_of_code_2025.utils import obtain_input
 
-    import numpy as np
     return Path, mo, np, obtain_input
 
 
@@ -70,7 +71,8 @@ def _(lines, np, ops):
     split_idcs[-1] = len(transposed_lines)
 
     grouped_numbers = [
-        transposed_lines[start + 1 : end].astype(int) for start, end in zip(split_idcs, split_idcs[1:])
+        transposed_lines[start + 1 : end].astype(int)
+        for start, end in zip(split_idcs, split_idcs[1:])
     ]
 
     sum(group.sum() if op == "+" else group.prod() for group, op in zip(grouped_numbers, ops))

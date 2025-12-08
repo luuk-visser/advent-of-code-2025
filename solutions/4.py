@@ -12,6 +12,7 @@ def _():
     import numpy as np
 
     from advent_of_code_2025.utils import obtain_input
+
     return Path, mo, np, obtain_input
 
 
@@ -50,10 +51,8 @@ def _(input_fp, np):
             - grid[i, j]
         )
 
-
     def is_accessible_paper(grid, i, j):
         return grid[i, j] and count_surrounding_rolls(grid, i, j) < 4
-
 
     grid = np.array([list(line) for line in open(input_fp).read().splitlines()]) == "@"
     n, m = grid.shape
