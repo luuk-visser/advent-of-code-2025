@@ -6,13 +6,13 @@ app = marimo.App(width="medium")
 
 @app.cell
 def _():
-    import marimo as mo
     from pathlib import Path
+
+    import marimo as mo
+    import numpy as np
 
     from advent_of_code_2025.graph import UnionFindBySize
     from advent_of_code_2025.utils import obtain_input
-
-    import numpy as np
     return Path, UnionFindBySize, mo, np, obtain_input
 
 
